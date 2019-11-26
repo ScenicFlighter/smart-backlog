@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 
 import styles from '../styles/styles.scss';
 
-import {
-  UserActions
-} from './../actions';
-
 class App extends React.Component {
   constructor(props) {
     super(props);
