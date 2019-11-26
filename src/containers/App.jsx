@@ -1,18 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import styles from '../styles/styles.scss';
+import { Button } from "shards-react";
+
+import BacklogApis from '../links/backlog';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  async handleRequestAccessToken() {
+    const response = await BacklogApis.requestAccessToken("MYoKONqRqUVczQEQEosp1Nru4CufZ5KjHucLH5PoAm6x5TACCtjDiI0Re6zHzwMb");
+    console.log(response);
+  }
+
   render() {
     return (
-      <div>
-        <div className={styles.blue}>Hello world!</div>
-      </div>
+      <>
+      <Button onClick={this.handleRequestAccessToken}>Backlogログイン</Button>
+      <Button onClick={BacklogApis.requestOAuthCode}>Backlogログイン</Button>
+</>
     );
   }
 }
