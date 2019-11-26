@@ -1,1 +1,8 @@
+# Node Modules
 node_modules
+
+# Cache
+.cache
+
+# dist
+dist
