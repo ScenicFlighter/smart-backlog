@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   async handleRequestAccessToken() {
-    const response = await BacklogApis.requestAccessToken("MYoKONqRqUVczQEQEosp1Nru4CufZ5KjHucLH5PoAm6x5TACCtjDiI0Re6zHzwMb");
+    const response = await BacklogApis.requestAccessToken("test");
     console.log(response);
   }
 
