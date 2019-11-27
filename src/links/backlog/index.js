@@ -11,7 +11,11 @@ const BacklogApis = {
     requestOAuthCode: () => {
         document.location = `${urls.oauth}?client_id=${BacklogClient.client_id}&redirect_url=${BacklogClient.redirect_uri}&response_type=code`;
     },
-    // Request AccessToken
+    /**
+     * @method requestAccessToken
+     * @param {String} code
+     * @return {String} result
+     */
     requestAccessToken: async (code) => {
         const result = await fetch(urls.request_access_token, {
             method: "POST",
